@@ -17,7 +17,7 @@ import static org.apache.commons.codec.binary.Base64.encodeBase64String;
  * Time: 11:59 AM
  */
 
-class RavenClient {
+public class RavenClient {
 
     private static final String RAVEN_JAVA_VERSION = "Raven-Java 0.4";
     private RavenConfig config;
@@ -325,7 +325,7 @@ class RavenClient {
      * Send an exception to the sentry server.
      *
      * @param exception     exception that occurred
-     * @return lastID       The ID for the last message. 
+     * @return lastID       The ID for the last message.
      */
     public String captureException(Throwable exception) {
         return captureException(exception.getMessage(), RavenUtils.getTimestampLong(), "root", 50, null, exception);
